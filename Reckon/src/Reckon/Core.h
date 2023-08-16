@@ -4,7 +4,7 @@
 	#ifdef RCK_BUILD_DLL
 		#define RECKON_API __declspec(dllexport)
 	#else
-		#define RECKON_API __declspec(dllexport)
+		#define RECKON_API __declspec(dllimport)
 	#endif	
 #else
 	#error Reckon only supports windows

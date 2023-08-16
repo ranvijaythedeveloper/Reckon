@@ -1,0 +1,3 @@
+[submodule "Reckon/vendor/spdlog"]
+	path = Reckon/vendor/spdlog
+	url = https://github.com/gabime/spdlog
