@@ -1,20 +1,20 @@
 
-#include <Reckon.h>
+#include <ReckonEngine.h>
 
-class Sandbox : public Reckon::Application
+class SandBox : public ReckonEngine::Application
 {
 public:
-	Sandbox()
+	SandBox()
 	{
 
 	}
-	~Sandbox()
+	~SandBox()
 	{
 
 	}
 };
-
-Reckon::Application* Reckon::CreateApplication()
+ReckonEngine::Application* ReckonEngine::CreateApplication()
 {
-	return new Sandbox;
+	return new SandBox;
 }
+

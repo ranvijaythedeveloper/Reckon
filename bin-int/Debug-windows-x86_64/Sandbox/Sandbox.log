@@ -1,0 +1,6 @@
+﻿  SandboxApp.cpp
+E:\vs projects\Reckon Engine\ReckonEngine\src\Reckon_Engine\Log.h(16,42): warning C4251: 'ReckonEngine::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'ReckonEngine::Log'
+E:\vs projects\Reckon Engine\ReckonEngine\vendor\spdlog\include\spdlog\details\registry.h(34,31): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+E:\vs projects\Reckon Engine\ReckonEngine\src\Reckon_Engine\Log.h(17,42): warning C4251: 'ReckonEngine::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'ReckonEngine::Log'
+E:\vs projects\Reckon Engine\ReckonEngine\vendor\spdlog\include\spdlog\details\registry.h(34,31): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+  Sandbox.vcxproj -> E:\vs projects\Reckon Engine\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
