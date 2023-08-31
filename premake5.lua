@@ -18,14 +18,20 @@ project "ReckonEngine"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}") -- Corrected objdir path
 
+    pchheader "rckpch.h"
+    pchsource "Reckon/src/rckpch.cpp"
+
     files 
     {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
+        "%{prj.name}/cpp.hint"
+
     }
 
     includedirs 
     {
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 

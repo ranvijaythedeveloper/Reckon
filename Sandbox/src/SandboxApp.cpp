@@ -1,7 +1,7 @@
 
 #include <ReckonEngine.h>
 
-class SandBox : public ReckonEngine::Application
+class SandBox : public Reckon::Application
 {
 public:
 	SandBox()
@@ -13,7 +13,7 @@ public:
 
 	}
 };
-ReckonEngine::Application* ReckonEngine::CreateApplication()
+Reckon::Application* Reckon::CreateApplication()
 {
 	return new SandBox;
 }

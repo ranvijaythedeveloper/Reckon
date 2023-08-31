@@ -1,46 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Reckon_Engine">
-      <UniqueIdentifier>{7CBFC4AC-E87F-40E3-B1BA-89601D3A85BF}</UniqueIdentifier>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Reckon_Engine\Events">
-      <UniqueIdentifier>{E0A77081-CC36-FA4A-7555-0E4661C30AF1}</UniqueIdentifier>
+    <Filter Include="src\Reckon">
+      <UniqueIdentifier>{DEABE02B-CA63-2279-336B-FBD41F42BD69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Reckon\Events">
+      <UniqueIdentifier>{02929EB5-6EA8-9C4B-B71F-286D23756DD3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ReckonEngine.h" />
-    <ClInclude Include="src\Reckon_Engine\Application.h">
-      <Filter>Reckon_Engine</Filter>
+    <ClInclude Include="src\Reckon\Application.h">
+      <Filter>src\Reckon</Filter>
     </ClInclude>
-    <ClInclude Include="src\Reckon_Engine\Core.h">
-      <Filter>Reckon_Engine</Filter>
+    <ClInclude Include="src\Reckon\Core.h">
+      <Filter>src\Reckon</Filter>
     </ClInclude>
-    <ClInclude Include="src\Reckon_Engine\EntryPoint.h">
-      <Filter>Reckon_Engine</Filter>
+    <ClInclude Include="src\Reckon\EntryPoint.h">
+      <Filter>src\Reckon</Filter>
     </ClInclude>
-    <ClInclude Include="src\Reckon_Engine\Events\ApplicationEvent.h">
-      <Filter>Reckon_Engine\Events</Filter>
+    <ClInclude Include="src\Reckon\Events\ApplicationEvent.h">
+      <Filter>src\Reckon\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Reckon_Engine\Events\Event.h">
-      <Filter>Reckon_Engine\Events</Filter>
+    <ClInclude Include="src\Reckon\Events\Event.h">
+      <Filter>src\Reckon\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Reckon_Engine\Events\KeyEvent.h">
-      <Filter>Reckon_Engine\Events</Filter>
+    <ClInclude Include="src\Reckon\Events\KeyEvent.h">
+      <Filter>src\Reckon\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Reckon_Engine\Events\MouseEvent.h">
-      <Filter>Reckon_Engine\Events</Filter>
+    <ClInclude Include="src\Reckon\Events\MouseEvent.h">
+      <Filter>src\Reckon\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Reckon_Engine\Log.h">
-      <Filter>Reckon_Engine</Filter>
+    <ClInclude Include="src\Reckon\Log.h">
+      <Filter>src\Reckon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ReckonEngine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rckpch.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Reckon_Engine\Application.cpp">
-      <Filter>Reckon_Engine</Filter>
+    <ClCompile Include="src\Reckon\Application.cpp">
+      <Filter>src\Reckon</Filter>
     </ClCompile>
-    <ClCompile Include="src\Reckon_Engine\Log.cpp">
-      <Filter>Reckon_Engine</Filter>
+    <ClCompile Include="src\Reckon\Log.cpp">
+      <Filter>src\Reckon</Filter>
     </ClCompile>
+    <ClCompile Include="src\rckpch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

@@ -76,10 +76,11 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>rckpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>RCK_PLATFORM_WINDOWS;RCK_BUILD_DLL;RCK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -94,10 +95,11 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>rckpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>RCK_PLATFORM_WINDOWS;RCK_BUILD_DLL;RCK_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -116,10 +118,11 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>rckpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>RCK_PLATFORM_WINDOWS;RCK_BUILD_DLL;RCK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -140,19 +143,26 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Reckon\Application.h" />
+    <ClInclude Include="src\Reckon\Core.h" />
+    <ClInclude Include="src\Reckon\EntryPoint.h" />
+    <ClInclude Include="src\Reckon\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Reckon\Events\Event.h" />
+    <ClInclude Include="src\Reckon\Events\KeyEvent.h" />
+    <ClInclude Include="src\Reckon\Events\MouseEvent.h" />
+    <ClInclude Include="src\Reckon\Log.h" />
     <ClInclude Include="src\ReckonEngine.h" />
-    <ClInclude Include="src\Reckon_Engine\Application.h" />
-    <ClInclude Include="src\Reckon_Engine\Core.h" />
-    <ClInclude Include="src\Reckon_Engine\EntryPoint.h" />
-    <ClInclude Include="src\Reckon_Engine\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Reckon_Engine\Events\Event.h" />
-    <ClInclude Include="src\Reckon_Engine\Events\KeyEvent.h" />
-    <ClInclude Include="src\Reckon_Engine\Events\MouseEvent.h" />
-    <ClInclude Include="src\Reckon_Engine\Log.h" />
+    <ClInclude Include="src\rckpch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Reckon_Engine\Application.cpp" />
-    <ClCompile Include="src\Reckon_Engine\Log.cpp" />
+    <ClCompile Include="src\Reckon\Application.cpp" />
+    <ClCompile Include="src\Reckon\Log.cpp" />
+    <ClCompile Include="src\rckpch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

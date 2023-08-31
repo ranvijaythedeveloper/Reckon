@@ -1,8 +1,8 @@
 #pragma once
 // for use by user scripts
-#include "Reckon_Engine/Application.h"
+#include "Reckon/Application.h"
 #include <stdio.h>
-#include "Reckon_Engine/Log.h"
+#include "Reckon/Log.h"
 // -----------------------Entry Point------------------------
-#include "Reckon_Engine/EntryPoint.h"
+#include "Reckon/EntryPoint.h"
 //------------------------Entry Point------------------------
