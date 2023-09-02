@@ -9,4 +9,11 @@
 #error RCK Only Supports Windows
 #endif
 
+#ifdef RCK_ENABLE_ASSERTS
+	#define RCK_ASSERT(x, ...) {if(!(x)) {RCK_ERROR("Assertion Failed: {0}",__VA_ARGS__); __debugbreak(); } }
+	#define RCK_CORE_ASSERT(x, ...) {if(!(x)) {RCK_CORE_ERROR("Assertion Failed: {0}",__VA_ARGS__); __debugbreak(); } }
+#else
+#define RCK_ASSERT(x, ...)
+#define RCK_CORE_ASSERT(x, ...)
+#endif
 #define BIT(x) (1 << x)

@@ -4,6 +4,12 @@
     <Filter Include="src">
       <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Platform">
+      <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\Windows">
+      <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Reckon">
       <UniqueIdentifier>{DEABE02B-CA63-2279-336B-FBD41F42BD69}</UniqueIdentifier>
     </Filter>
@@ -12,6 +18,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>src\Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Reckon\Application.h">
       <Filter>src\Reckon</Filter>
     </ClInclude>
@@ -36,6 +45,9 @@
     <ClInclude Include="src\Reckon\Log.h">
       <Filter>src\Reckon</Filter>
     </ClInclude>
+    <ClInclude Include="src\Reckon\Window.h">
+      <Filter>src\Reckon</Filter>
+    </ClInclude>
     <ClInclude Include="src\ReckonEngine.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -44,6 +56,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Reckon\Application.cpp">
       <Filter>src\Reckon</Filter>
     </ClCompile>

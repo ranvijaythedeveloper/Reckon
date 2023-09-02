@@ -10,6 +10,12 @@ workspace "ReckonEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+
+IncludeDir = {}
+IncludeDir["GLFW"] = "ReckonEngine/vendor/GLFW/include"
+
+include "ReckonEngine/vendor/GLFW"
+
 project "ReckonEngine"
     location "ReckonEngine"
     kind "SharedLib"
@@ -19,7 +25,7 @@ project "ReckonEngine"
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}") -- Corrected objdir path
 
     pchheader "rckpch.h"
-    pchsource "Reckon/src/rckpch.cpp"
+    pchsource "ReckonEngine/src/rckpch.cpp"
 
     files 
     {
@@ -32,7 +38,14 @@ project "ReckonEngine"
     includedirs 
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
