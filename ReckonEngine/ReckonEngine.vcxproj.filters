@@ -42,6 +42,12 @@
     <ClInclude Include="src\Reckon\Events\MouseEvent.h">
       <Filter>src\Reckon\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Reckon\Layer.h">
+      <Filter>src\Reckon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Reckon\LayerStack.h">
+      <Filter>src\Reckon</Filter>
+    </ClInclude>
     <ClInclude Include="src\Reckon\Log.h">
       <Filter>src\Reckon</Filter>
     </ClInclude>
@@ -60,6 +66,12 @@
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Reckon\Application.cpp">
+      <Filter>src\Reckon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Reckon\Layer.cpp">
+      <Filter>src\Reckon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Reckon\LayerStack.cpp">
       <Filter>src\Reckon</Filter>
     </ClCompile>
     <ClCompile Include="src\Reckon\Log.cpp">

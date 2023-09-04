@@ -1,8 +1,9 @@
 #pragma once
 
 #include "Reckon/Window.h"
-
 #include <GLFW/glfw3.h>
+
+struct GLFWwindow;
 
 namespace Reckon
 {
